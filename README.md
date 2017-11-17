@@ -1,11 +1,11 @@
-# Create billing-service environment
+# Create billing-service-environment
 This tool create local environment for  Billing Service.
 
 ####Installation:
 
 ```sh 
 # Clone repo to your local machine:
-$ git clone _repo_
+$ git clone https://github.com/ivz-dev/billing-service-environment.git
 
 # Navigate to project dir: 
 $ cd billing-service-environment
@@ -36,6 +36,9 @@ $ docker start billing-service
 
 # Stop project: 
 $ docker kill billing-service 
+
+# Open container shell:
+$ docker exec -it billing-service /bin/sh
 ```
 
 Project will be launched on ```82``` port
