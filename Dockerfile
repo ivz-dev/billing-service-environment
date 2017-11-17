@@ -1,7 +1,7 @@
 FROM node:8.9.1-alpine
 
-COPY ./conf/docker-entrypoint.sh /
-COPY ./conf/run.sh /
+COPY docker-entrypoint.sh /
+COPY run.sh /
 
 RUN addgroup -S mysql \
     && adduser -S mysql -G mysql \
@@ -17,4 +17,4 @@ RUN npm i pm2 -g
 
 EXPOSE 8080
 ENTRYPOINT ["/docker-entrypoint.sh"]
-CMD ["/run.sh"]
+CMD ["mysqld", "--user=mysql"]
