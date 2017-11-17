@@ -44,6 +44,8 @@ EOSQL
     fi
 fi
 cd /src
+
+# Start project
 pm2 start index.js --watch
 
 exec "$@"

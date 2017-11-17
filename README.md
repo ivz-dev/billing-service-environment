@@ -26,7 +26,7 @@ npm      - 5.5.1
 mysql    - 5.7
 pm2      - 2.7.1
 ```
-- ```/var/www/billing-service/``` - Project dir
+- ```~/billing-service/``` - Project dir
 
 #### Commands: 
 
