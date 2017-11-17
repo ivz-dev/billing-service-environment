@@ -1,4 +1,4 @@
-# Create billing-service-environment
+# Create billing service environment
 This tool create local environment for  Billing Service.
 
 #### Installation:
