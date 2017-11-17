@@ -1,7 +1,6 @@
 FROM node:8.9.1-alpine
 
-COPY docker-entrypoint.sh /
-COPY run.sh /
+COPY ./conf/docker-entrypoint.sh /
 
 RUN addgroup -S mysql \
     && adduser -S mysql -G mysql \
