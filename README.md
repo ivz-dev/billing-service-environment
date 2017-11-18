@@ -27,7 +27,22 @@ mysql    - 5.7
 pm2      - 2.7.1
 ```
 - ```~/billing-service/``` - Project dir
+- mysql docker volume, for synchronized mysql data. 
+  
+#### Environment description:
 
+After the project is launched, in docker container will be running:
+1. Mysql  <br />
+Config:  ```user:mysql pass:''``` <br />
+Database storage will be synchronized with your local machine and thus all data will be save after stopping the container.
+2. Project <br />
+Your local code ```~/billing-service/``` will be synchronized with docker-container ```/src```, and will be launched through process manager *pm2*, like this:
+```sh 
+# /src
+pm2 start index.js --watch
+```
+Thus, you will get hot-reload your code.
+You can locally run npm command, install packages, *npm* directory also synchronized with docker-container.
 #### Commands: 
 
 ```sh 
